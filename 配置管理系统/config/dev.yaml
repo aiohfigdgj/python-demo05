@@ -1,0 +1,25 @@
+# ============================================
+# 开发环境配置（dev）
+# 特点：全部使用模拟数据，不访问真实网络，方便本地调试
+# ============================================
+app:
+  name: "my-agent"
+  version: "0.1.0"
+  env: "dev"
+  max_steps: 5          # Agent Loop 最大步数
+  log_level: "DEBUG"
+
+weather:
+  provider: "mock"      # mock = 模拟数据源，不调真实 API
+  city: "深圳"
+  timeout: 8
+  cache_file: "data/weather_cache.json"
+  cache_ttl: 3600
+
+knowledge:
+  store_path: "data/knowledge.json"
+
+llm:
+  provider: "mock"      # 开发环境不调用真实大模型
+  api_key: "${LLM_API_KEY}"   # 密钥用 ${ENV} 占位，运行时从环境变量注入，绝不写死
+  timeout: 30

@@ -1,0 +1,42 @@
+{
+  "深圳": {
+    "ts": 1786495305.7562187,
+    "data": {
+      "city": "深圳",
+      "temp": "28",
+      "weather": "晴",
+      "humidity": "65",
+      "source": "mock"
+    }
+  },
+  "河源": {
+    "ts": 1786495360.5320277,
+    "data": {
+      "city": "河源",
+      "temp": "30",
+      "weather": "Smoky haze",
+      "humidity": "72",
+      "source": "wttr"
+    }
+  },
+  "紫金县": {
+    "ts": 1786496781.0151877,
+    "data": {
+      "city": "紫金县",
+      "temp": "28",
+      "weather": "Smoky haze",
+      "humidity": "80",
+      "source": "wttr"
+    }
+  },
+  "五华县": {
+    "ts": 1786496898.2071388,
+    "data": {
+      "city": "五华县",
+      "temp": "30",
+      "weather": "Sunny",
+      "humidity": "69",
+      "source": "wttr"
+    }
+  }
+}

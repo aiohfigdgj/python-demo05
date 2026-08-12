@@ -1,0 +1,25 @@
+# ============================================
+# 生产环境配置（prod）
+# 特点：调用真实 wttr.in 接口（免费，无需密钥），与旧版工具一致的数据源
+# ============================================
+app:
+  name: "my-agent"
+  version: "0.1.0"
+  env: "prod"
+  max_steps: 10
+  log_level: "INFO"
+
+weather:
+  provider: "wttr"      # 真实数据源：wttr.in（无需 API Key）
+  city: "深圳"
+  timeout: 8
+  cache_file: "data/weather_cache_prod.json"   # prod 独立缓存，避免与 dev/test 互相污染
+  cache_ttl: 3600
+
+knowledge:
+  store_path: "data/knowledge.json"
+
+llm:
+  provider: "openai"    # 生产环境可接真实大模型
+  api_key: "${LLM_API_KEY}"
+  timeout: 30

@@ -1,0 +1,6 @@
+{
+  "provider": "wttr",
+  "timeout": 8,
+  "cache_file": "data/weather_cache.json",
+  "cache_ttl": 3600
+}

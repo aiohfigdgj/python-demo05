@@ -1,0 +1,25 @@
+# ============================================
+# 测试环境配置（test）
+# 特点：模拟数据 + 隔离的文件路径，测试不污染开发/生产数据
+# ============================================
+app:
+  name: "my-agent"
+  version: "0.1.0"
+  env: "test"
+  max_steps: 5
+  log_level: "DEBUG"
+
+weather:
+  provider: "mock"
+  city: "深圳"
+  timeout: 5
+  cache_file: "data/weather_cache_test.json"   # 测试缓存与 dev/prod 隔离
+  cache_ttl: 3600
+
+knowledge:
+  store_path: "data/knowledge_test.json"       # 测试专用库
+
+llm:
+  provider: "mock"
+  api_key: "${LLM_API_KEY}"
+  timeout: 5
